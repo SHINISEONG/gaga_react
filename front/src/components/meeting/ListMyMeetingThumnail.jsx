@@ -64,12 +64,10 @@ const ListMyMeetingThumnail = ({ meeting }) => {
         )
         .then(() => {
           mutateMeetingLsit();
-        });
-
-        if (response.status === 200) {
           setOpenModal(true);
           mutateMeeting();
-        }
+        });
+
       } catch (error) {
         console.error('Error updating meeting:', error);
       }
